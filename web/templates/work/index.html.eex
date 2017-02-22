@@ -1,0 +1,31 @@
+<div class="works">
+  <h2>Running Jobs</h2>
+  </div>
+  <div class="row work_table">
+    <div class="col-sm-12">
+      <table class="table table-striped">
+        <thead class="thead-default">
+          <tr>
+            <th>#</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= for id <- @work_ids do %>
+            <tr>
+              <td>
+                <%= link to_string(id), to: work_path(@conn, :show, id) %>
+              </td>
+              <td>running</td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div>
+
+  <nav aria-label="New " class="new_btn">
+    <%=link "New work", to: work_path(@conn, :new), class: "btn btn-warning new-work" %>
+  </nav>
+</div>

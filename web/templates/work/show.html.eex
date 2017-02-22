@@ -1,0 +1,28 @@
+<h2>Show Work</h2>
+
+<div class="row">
+  <div class="col-sm-12">
+    <table class="table">
+      <tbody>
+        <tr>
+          <td>id</td>
+          <td class="work_id"><%= @work.id %></td>
+        </tr>
+        <tr>
+          <td>Status</td>
+          <td class="work_status"><%= @work.status %></td>
+        </tr>
+      </tbody>
+    </table>
+    <pre class="work_output"><%= @work.data %></pre>
+    <div class="div__bottom_nav">
+      <%= link "Back", to: work_path(@conn, :index), class: "btn btn-primary btn__bottom_nav--spacing" %>
+
+      <form class="form-horizontal form__hidden--inline form__abort hidden" action="" method="post">
+        <input name="_method" type="hidden" value="post">
+        <input name="_csrf_token" type="hidden" value="<%= get_csrf_token() %>">
+        <%= submit "Abort", class: "btn btn-warning btn__bottom_nav--spacing btn__submit_abort" %>
+      </form>
+    </div>
+  </div>
+</div>

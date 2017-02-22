@@ -1,0 +1,21 @@
+#!/bin/bash
+COUNTER=20
+until [  $COUNTER -lt 1 ]; do
+    let COUNTER-=1
+
+
+
+
+
+sleep 1
+echo -e "╔════╤╤╤╤════╗\n║    │││ \   ║\n║    │││  O  ║\n║    OOO     ║"
+sleep 1
+echo -e "╔════╤╤╤╤════╗\n║    ││││    ║\n║    ││││    ║\n║    OOOO    ║"
+sleep 1
+echo -e "╔════╤╤╤╤════╗\n║   / │││    ║\n║  O  │││    ║\n║     OOO    ║"
+sleep 1
+echo -e "╔════╤╤╤╤════╗\n║    ││││    ║\n║    ││││    ║\n║    OOOO    ║"
+done
+echo "done!"
+
+exit 0

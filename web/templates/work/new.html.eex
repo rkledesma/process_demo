@@ -1,0 +1,15 @@
+<h2>New work</h2>
+
+<div>
+  <div class="row">
+    <div class="col-sm-4">
+      <form class="form-horizontal" action="<%= work_path(@conn, :create) %>" method="post">
+        <input name="_method" type="hidden" value="post">
+        <input name="id" type="text" value="">
+        <input name="_csrf_token" type="hidden" value="<%= get_csrf_token() %>">
+        <input class="btn btn-warning btn__bottom_nav--spacing btn__submit_new_work" type="submit" value="Start">
+      </form>
+    </div>
+  </div>
+</div>
+<%= link "Back", to: work_path(@conn, :index), class: "btn btn-secondary" %>
